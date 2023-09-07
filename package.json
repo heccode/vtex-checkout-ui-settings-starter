@@ -1,0 +1,40 @@
+{
+  "name": "vtex-checkout-ui-settings-starter",
+  "version": "1.0.0",
+  "description": "Frontend kit starter with webpack for checkout-ui-settings vtex app.",
+  "main": "index.js",
+  "repository": "https://github.com/heccode/vtex-checkout-ui-settings-starter",
+  "author": "Héctor Huerta",
+  "license": "MIT",
+  "scripts": {
+    "init": "node configuration/init.js",
+    "clean": "node configuration/clean.js",
+    "start": "webpack serve --config configuration/webpack.config.dev.js",
+    "start:link": "rimraf checkout-ui-custom && webpack serve --config configuration/webpack.config.link.dev.js",
+    "build:dev": "rimraf checkout-ui-custom && webpack --config configuration/webpack.config.dev.js",
+    "build:prod": "rimraf checkout-ui-custom && webpack --config configuration/webpack.config.prod.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.11",
+    "@babel/plugin-transform-runtime": "^7.22.10",
+    "@babel/preset-env": "^7.22.14",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.8.1",
+    "globby": "^13.2.2",
+    "json-minimizer-webpack-plugin": "^4.0.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "prettier": "^2.3.2",
+    "rimraf": "^5.0.1",
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-shell-plugin-next": "^2.3.1"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2"
+  }
+}
